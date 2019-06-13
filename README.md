@@ -3,7 +3,7 @@
 
 # PowerCoders AI workshop
 
-PowerCoders AI workshop
+PowerCoders AI workshop - [Google Slides](https://docs.google.com/presentation/d/1E7Im5E3Q49Po0TCCj1Pv27HIyyLVBWoXuTfL8vw3pxo)
 
 * Part 1 - Run the Python code with [mybinder.org](https://mybinder.org/v2/gh/epfl-exts/powercoders-ai/master) or [Google Colab](https://colab.research.google.com/github/epfl-exts/powercoders-ai)
 * Part 2 - Run the web app with [CodePen](https://codepen.io/exts/pen/QXjLPy)
