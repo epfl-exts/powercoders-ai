@@ -1,10 +1,12 @@
 
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/epfl-exts/powercoders-ai) [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/epfl-exts/powercoders-ai/master)
+
 # PowerCoders AI workshop
 
 PowerCoders AI workshop
 
-* Part 1 - Python code
-* Part 2 - Web app
+* Part 1 - Run the Python code with [mybinder.org](https://mybinder.org/v2/gh/epfl-exts/powercoders-ai/master) or [Google Colab](https://colab.research.google.com/github/epfl-exts/powercoders-ai)
+* Part 2 - Run the web app with [CodePen](https://codepen.io/exts/pen/QXjLPy)
 
 Additional resources
 ---
