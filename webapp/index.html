@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <!-- CSS -->
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="index.css">
+
+        <!-- TensorFlow.js code -->
+        <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.0.0/dist/tf.min.js"></script>
+        <script src="script.js"></script>
+
+        <title>TensorFlow.js app</title>
+        <meta charset="utf-8">
+    </head>
+  <body onload="guess()">
+    <div class="jumbotron text-center">
+        <h1>Language detection with TensorFlow.js</h1>
+        <p>PowerCoders AI workshop - 2019 EPFL EdTech Collider</p> 
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Languages</h5>
+                        <textarea id="languages">["Deutsch", "Fran\u00e7ais", "Itialiano", "Rumantsch", "English"]</textarea>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Vocabulary</h5>
+                        <textarea id="vocabulary">[" a ", "s e", " in", "cha", "the", "e. ", "n s", "ers", "e f", "ti ", "st ", "azi", " l\u2019", "s. ", "n i", "erl", "er ", "de ", " re", "ur ", "da ", "es ", "i c", "uns", "lic", "ons", "to ", "ent", "pli", " su", "gen", "con", "for", " al", "e c", "e l", "von", "e p", "ni ", "izr", "el ", "ada", "ch ", "una", "uis", "l 1", " ch", "des", "tsc", " le", "ted", "hwe", "a. ", "ant", "en ", "ono", "s s", " as", "n t", "si ", " tu", "lan", "ed ", "sa ", "di ", "ung", "les", "sta", "nta", "a c", "del", "au ", " mo", "che", "ver", " se", " pr", "ra ", "nge", "ist", "ize", "swi", "cht", "a s", "of ", "tra", " we", "cun", "en.", "her", "ro ", "ss ", " ei", "ral", "e a", "one", "d i", "ns ", " fo", "aus", "sch", "zer", " da", "und", " im", "son", "zze", "a e", "ica", " sw", "dal", " la", "iss", "all", "ate", "nce", "a l", "nd ", "ala", "im ", "ne ", " is", "nen", " ne", "ils", " to", "n d", "zio", "us ", "wit", " so", "is ", "ue ", "svi", "ont", "et ", " th", "eur", "t l", "ta ", ", a", " st", "ach", "te ", " ca", "ll'", "a t", ". l", "ell", "s p", "itz", "oun", "le ", "s o", " un", "nde", " au", "e e", "las", "me ", "ziu", "ts ", ". d", " ce", "dan", "mit", "ter", "a p", "no ", "ind", "s l", "e, ", "den", "par", "re ", " vo", "ina", " be", "ion", "a d", "ura", "he ", "tze", " es", " ar", " et", "nto", " pa", " ge", " po", " qu", "chw", "o a", "tio", "iqu", "la ", "tad", "li ", "on ", " \u00e0 ", " an", " co", " wa", " mi", "tre", " ha", "ls ", "han", "s a", "ich", "our", " of", "n l", "un ", "ren", "a, ", "nel", " te", "sen", "il ", "s c", "ng ", "du ", "iun", " si", "ha ", "ert", "n. ", "ste", "era", "na ", " \u00e8 ", "der", "eme", "men", "lla", "sui", "rla", "a m", "an ", "t d", "s, ", "rei", "r s", "ing", "rde", "ran", "ber", "viz", " zu", ", d", "lle", "ali", "ern", "eiz", "nte", "in ", "and", " l'", "ine", "s t", "s d", "e t", " il", "zra", "se ", "i a", " sc", "ans", " cu", "e d", " fr", "ere", "e o", "th ", "ede", "que", "are", "das", " de", "it ", "hen", "man", " pe", "f t", "r l", "\u00e9ra", "ly ", "oni", "n a", "or ", "ie ", " en", " e ", "o d", "nt ", "iz ", " d'", "ire", " sv", ", l", "ale", "ia ", "ein", "per", "ato", "ten", "i s", "sse", "wei", "ati", "al ", " ve", "die", "e i", "eit", "isc", "i p", "o s", "i d", "d t", "res", "est", " pl", " di", "izz", " du", "as ", "wis", "e s"]</textarea>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Text</h5>
+                        <textarea id="text">il n’y a pas le feu au lac</textarea>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-3"></div>
+
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Predictions</h5>
+                        <p class="card-text">Neural network output</p>
+                        <pre id="prediction"></pre>
+                        <button type="button" class="btn btn-primary" onclick="guess()">Guess language</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  </body>
+</html>
